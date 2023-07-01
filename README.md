@@ -6,7 +6,7 @@ To evaluate non-terminal nodes, the following evaluation function $f$ is used to
 
 $$ f(s) = 1 - (1 - \frac{N_0}{7 N_1} + \frac{0.35}{d_f})^8 $$
 
-Here, $N_0, N_1$ are the number of non-flag units alive for player 0 and player 1, respectively. $d_f$ is the Manhattan distance from the closest piece of player 0 to the flag of player 1.
+Here, $N_0, N_1$ are the number of non-flag units alive for the bot and the enemy, respectively. $d_f$ is the Manhattan distance from the closest piece of the to the flag of the enemy.
 
 This project is written in C++ and should work on both Windows (using Visual Studio) and Linux.
 
