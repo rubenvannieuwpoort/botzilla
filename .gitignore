@@ -1,0 +1,10 @@
+*.vcxproj.*
+FileContentIndex/*
+x64/
+.vs/
+.vscode/
+situation
+tournament
+wrapper
+bot.bin
+bot.zip
