@@ -77,7 +77,7 @@ The `State` class has two methods, `do_move` and `reveal`. Only pieces which are
 There are three executables that can be produced: `wrapper`, `tournament`, and `situation`.
   - The `wrapper` is used to play against other bots via a runner. The communication with the runner happens via JSON over standard input/output.
   - The `tournament` is used to test how multiple bots perform against eachother. It is a multithreaded program that lets all the bots play a bunch of matches against eachother, keeping track of the number of wins/draws/losses for each bot.
-  - The `situation` is used to play a specific situation. I used it to 
+  - The `situation` is used to play a specific situation. I used it to debug situations where the bot showed weird behavior.
 
 
 ## Known problems
