@@ -4,7 +4,7 @@ This is my bot for the infinibattle 2023. It uses a [Monte-Carlo tree search (MC
 
 To evaluate non-terminal nodes, the following evaluation function $f$ is used to evaluate a state $s$ (assuming the bot is player 0). For a terminal state $s$, the value of $f(s)$ is 1 if the bot has won, 0 if it has lost, and 0.5 if it's a draw. For a nonterminal state $s$:
 
-$$ f(s) = 1 - (1 - \frac{N_0}{7 N_1} + \frac{0.35}{d_f})^8 $$
+$$ f(s) = 1 - (1 - (\frac{N_0}{7 N_1} + \frac{0.35}{d_f}))^8 $$
 
 Here, $N_0, N_1$ are the number of non-flag units alive for the bot and the enemy, respectively. $d_f$ is the Manhattan distance from the closest piece of the to the flag of the enemy.
 
@@ -84,4 +84,4 @@ There are three executables that can be produced: `wrapper`, `tournament`, and `
 
 Due to the ε-greedy exploration strategy, the value of terminal positions dissipates quickly over the number of moves. The bot will sometimes happily let a defending piece walk by an attacking piece even though there is no other piece close enough to defend the flag.
 
-The solution would be to use [Upper Confidence bounds applied to Trees (UCT)](https://www.chessprogramming.org/UCT). I tried implementing this, but it seemed to hang (or it was extremely slow), so I stuck with ε-greedy for now.
+A possible solution would be to use [Upper Confidence bounds applied to Trees (UCT)](https://www.chessprogramming.org/UCT). I tried implementing this, but it seemed to hang (or it was extremely slow), so I stuck with ε-greedy.
