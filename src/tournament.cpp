@@ -11,9 +11,9 @@
 #define GAMES 300
 #define MAX_TURNS 250
 
-int draws[BOTS * BOTS] = {0};
-int wins[BOTS * BOTS] = {0};
-int losses[BOTS * BOTS] = {0};
+int draws[BOTS * BOTS] = { 0 };
+int wins[BOTS * BOTS] = { 0 };
+int losses[BOTS * BOTS] = { 0 };
 
 
 void play_games(int lo, int hi) {
@@ -48,19 +48,19 @@ void play_games(int lo, int hi) {
 }
 
 int main() {
-    std::vector<std::thread> threads;
+	std::vector<std::thread> threads;
 	const int NUM_THREADS = 16; // std::thread::hardware_concurrency();
 
 	int total_games = GAMES * BOTS * BOTS;
-    for (int i = 0; i < NUM_THREADS; ++i) {
+	for (int i = 0; i < NUM_THREADS; ++i) {
 		int lo = (total_games * i) / NUM_THREADS;
 		int hi = (total_games * (i + 1))/ NUM_THREADS;
-        threads.emplace_back(play_games, lo, hi);
-    }
+		threads.emplace_back(play_games, lo, hi);
+	}
 
-    for (auto& thread : threads) {
-        thread.join();
-    }
+	for (auto& thread : threads) {
+		thread.join();
+	}
 
 	std::cout << "draws\n";
 	for (int b0 = 0; b0 < BOTS; b0++) {
