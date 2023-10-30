@@ -1,6 +1,6 @@
-# Infinibattle 2023 bot
+# Botzilla
 
-This is my bot for the infinibattle 2023. It uses a [Monte-Carlo tree search (MCTS)](https://en.wikipedia.org/wiki/Monte_Carlo_tree_search) with ε-greedy exploration to play Barrage stratego.
+This is my bot for the [infinibattle 2023](https://infi.nl/nieuws/infinibattle-23/). It uses a [Monte-Carlo tree search (MCTS)](https://en.wikipedia.org/wiki/Monte_Carlo_tree_search) with ε-greedy exploration to play Barrage stratego.
 
 To evaluate non-terminal nodes, the following evaluation function $f$ is used to evaluate a state $s$ (assuming the bot is player 0). For a terminal state $s$, the value of $f(s)$ is 1 if the bot has won, 0 if it has lost, and 0.5 if it's a draw. For a nonterminal state $s$:
 
