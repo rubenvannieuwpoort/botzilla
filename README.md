@@ -85,3 +85,8 @@ There are three executables that can be produced: `wrapper`, `tournament`, and `
 Due to the ε-greedy exploration strategy, the value of terminal positions dissipates quickly over the number of moves. The bot will sometimes happily let a defending piece walk by an attacking piece even though there is no other piece close enough to defend the flag.
 
 A possible solution would be to use [Upper Confidence bounds applied to Trees (UCT)](https://www.chessprogramming.org/UCT). I tried implementing this, but it seemed to hang (or it was extremely slow), so I stuck with ε-greedy.
+
+
+# Possible improvements
+
+Use [Monte-Carlo graph search](https://github.com/lightvector/KataGo/blob/master/docs/GraphSearch.md).
